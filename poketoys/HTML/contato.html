@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/x-icon" href="../images/icon.ico">
+    <title>Contato - Poketoys</title>
+</head>
+<body>
+    <header>
+        <h1>Poketoys</h1>
+        <section class="navegacao">
+            <div class="botoes-navegacao">
+                <a href="index.html" class="botao">Home</a>
+                <a href="sobre.html" class="botao">Sobre</a>
+                <a href="produtos.html" class="botao">Produtos</a>
+                <a href="contato.html" class="botao">Contato</a>
+                <a href="jogo.html" class="botao">Jogo da Sorte</a>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="contato">
+            <h2>Fale Conosco</h2>
+            <form id="formContato">
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="assunto">Assunto:</label>
+                <input type="text" id="assunto" name="assunto" required>
+
+                <label for="telefone">Telefone de contato:</label>
+                <input type="tel" id="telefone" name="telefone" required pattern="[0-9]+" title="Digite apenas números." required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Poketoys. Localização: Rio de Janeiro/RJ - Brasil</p>
+        <p>poketoys@gmail.com - (21) 2424-4321</p>
+    </footer>
+
+    <!-- js que estava no forms js mas ficou dando errado até eu desistir e puxar pro html, agora ele funciona... -->
+    <script>
+        document.getElementById('formContato').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio real do formulário para não recarregar a página
+
+            // Exibe o alert com a mensagem de confirmação
+            alert("Obrigado por entrar em contato. \nRetornaremos em breve!");
+            this.reset();
+        });
+    </script>
+</body>
+</html>
